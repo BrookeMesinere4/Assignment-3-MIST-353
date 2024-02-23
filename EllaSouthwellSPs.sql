@@ -1,4 +1,4 @@
-USE [TravelSiteDB]
+USE TravelDatabase
 GO
 
 Create or ALTER proc [dbo].[spRoomGetAvailabilityByDateRange]
