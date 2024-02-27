@@ -2,14 +2,17 @@
 ## Company's Plans
 
 ## Procedures
+### Trey Zontek
 The first stored procedure used was "spHotelGetDetails." We decided to use this procedure in order to get all the information needed on a specific hotel by putting in the hotel ID.
 
 The following procedure used was "spHotelGetRatings." This product gave the user access to hotel ratings by hotel ID.
 
+### Brooke Mesinere
 The third procedure that we included on our site was "spRoomGetAvailabilityByDate." The procedure is meant to find the availability of hotel rooms by hotel ID and by the date needed.
 
 The fourth procedure used was "spHotelAddReview." This was created so the users could look at hotel reviews and also add their reviews.
 
+### Ella Southwell
 The fifth procedure was "spRoomGetAvailabilityByDateRange." This procedure was created to get the availability of dates the user can use if staying multiple nights at a hotel. 
 
 The last procedure was "spHotelSearchBy Radius." This was used to get all hotels within a radius given by a user. 
