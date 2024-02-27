@@ -23,7 +23,7 @@ AS
 BEGIN
 SELECT *
 FROM Hotel
-WHERE sqrt(power((longitude-@longitude),2)+ power((latitude-@latitude),2)) <@radius
+WHERE sqrt(power((longitude-@longitude),2)+ power((latitude-@latitude),2)) <=@radius
 END
 
 GO
