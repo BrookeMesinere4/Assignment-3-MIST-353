@@ -7,7 +7,7 @@ Create or ALTER proc [dbo].[spRoomGetAvailabilityByDateRange]
 AS
 SELECT *
 FROM(SELECT RoomID, COUNT(AvDate) as numDays
-FROM RoomAvailiability 
+FROM RoomAvail 
 WHERE AvDate between @StartDate and @EndDate
 Group by RoomID
 HAVING COUNT(AvDate) = DATEDIFF(day, @StartDate, @EndDate)+1) ra
@@ -27,6 +27,17 @@ WHERE sqrt(power((longitude-@longitude),2)+ power((latitude-@latitude),2)) <=@ra
 END
 
 GO
+
+
+
+
+
+
+
+
+
+
+
 
 
 
