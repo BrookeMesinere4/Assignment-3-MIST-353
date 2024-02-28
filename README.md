@@ -1,5 +1,6 @@
 # Assignment 3: Merging Ideas and Databases
 ## Company's Plans
+As a team we have decided to combine our separate ideas based around vacation travel and event planning into one single feature that can assess both vacation and event by suggesting the best hotels in the desired weather environment. We will do this by taking the input of our users and refencing that input to the database then returning the hotels in that area sorted by their ratings. With our combined knowledge we will be able to provide the best website possible to suit our clients needs.
 
 ## Procedures
 ### Trey Zontek
