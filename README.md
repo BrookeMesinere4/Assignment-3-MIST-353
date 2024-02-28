@@ -8,9 +8,9 @@ The first stored procedure used was "spHotelGetDetails." We decided to use this 
 The following procedure used was "spHotelGetRatings." This product gave the user access to hotel ratings by hotel ID.
 
 ### Brooke Mesinere
-The third procedure that we included on our site was "spRoomGetAvailabilityByDate." The procedure is meant to find the availability of hotel rooms by hotel ID and by the date needed.
+The third procedure that we included on our site was "spRoomGetAvailByDate." The procedure is meant to find the availability of hotel rooms by hotel ID and by the date that is needed by the user.
 
-The fourth procedure used was "spHotelAddReview." This was created so the users could look at hotel reviews and also add their reviews.
+The fourth procedure used was "spHotelAddReview." This was created so the users could look at hotel reviews and also add their own reviews.
 
 ### Ella Southwell
 The fifth procedure was "spRoomGetAvailabilityByDateRange." This procedure was created to get the availability of dates the user can use if staying multiple nights at a hotel. Using the room availability table, I created a code allowing users to find all available dates during a given period. Then, I group the dates available by the room ID so the user can look at the dates available for a specific hotel. This procedure is valuable for our site because it helps users book for specific days.
@@ -19,4 +19,4 @@ The last procedure was "spHotelSearchBy Radius." This was used to get all hotels
 
 ## References
 We followed our own notes and examples that we got from lectures in this assignment. We also had help from ChatGPT to create our mock data. The prompt used in ChatGPT is as followed:
-""
+"Can you write me a procted query using SQL that adds a hotel review to a website?"
