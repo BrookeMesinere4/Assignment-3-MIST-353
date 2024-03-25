@@ -14,9 +14,9 @@ namespace VacationSiteAPI.Controllers
         { this.hotelservice = hotelservice; }
 
         [HttpGet("HotelSearchByRadius/longitude={longitude}&latitude={latitude}")]
-        public async Task<List<Hotel>> HotelSearchByRadius(decimal latitude, decimal longitude)
+        public async Task<List<Hotel>> spHotelSearchByRadius(decimal latitude, decimal longitude)
         { 
-        var hotelDetails = await hotelservice.HotelSearchByRadius(latitude, longitude);
+        var hotelDetails = await hotelservice.spHotelSearchByRadius(latitude, longitude);
             if (hotelDetails == null)
                {
             }
@@ -24,9 +24,9 @@ namespace VacationSiteAPI.Controllers
         
         }
         [HttpGet("RoomGetAvailabilityByDateRange/StartDate={StartDate}&EndDate={EndDate}")]
-        public async Task<List<RoomAvail>> RoomGetAvailabilityByDateRange(DateTime StartDate, DateTime EndDate)
+        public async Task<List<RoomAvail>> spRoomGetAvailabilityByDateRange(DateTime StartDate, DateTime EndDate)
         {
-            var RoomAvail = await hotelservice.RoomGetAvailabilityByDateRange(StartDate, EndDate);
+            var RoomAvail = await hotelservice.spRoomGetAvailabilityByDateRange(StartDate, EndDate);
             if (RoomAvail == null)
             { }
             return RoomAvail;
