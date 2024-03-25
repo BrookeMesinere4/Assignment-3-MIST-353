@@ -26,7 +26,7 @@ namespace VacationSiteAPI.Repositories
         {
             var Startdateparam = new SqlParameter("@StartDate", StartDate);
             var Enddateparam = new SqlParameter("@EndDate", EndDate);
-            var roomDetails = await _dbContextClass.RoomAvail.FromSqlRaw("exec spRoomGetAvailabilityByDateRange @StartDate,@EndDate", Startdateparam, Enddateparam).ToListAsync();
+            var roomDetails = await Task.Run(() => _dbContextClass.RoomAvail.FromSqlRaw("exec spRoomGetAvailabilityByDateRange @StartDate,@EndDate", Startdateparam, Enddateparam).ToListAsync());
             return roomDetails;
         }
     }
