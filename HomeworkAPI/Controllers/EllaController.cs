@@ -6,11 +6,11 @@ namespace VacationSiteAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HotelSearchByRadiusController : Controller
+    public class EllaController : Controller
     {
 
         private readonly IEllaAPI hotelservice;
-        public HotelSearchByRadiusController(IEllaAPI hotelservice)
+        public EllaController(IEllaAPI hotelservice)
         { this.hotelservice = hotelservice; }
 
         [HttpGet("HotelSearchByRadius/longitude={longitude}&latitude={latitude}")]
