@@ -6,11 +6,11 @@ namespace VacationSiteAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HotelController : Controller
+    public class HotelSearchByRadiusController : Controller
     {
 
         private readonly IEllaAPI hotelservice;
-        public HotelController(IEllaAPI hotelservice)
+        public HotelSearchByRadiusController(IEllaAPI hotelservice)
         { this.hotelservice = hotelservice; }
 
         [HttpGet("HotelSearchByRadius/longitude={longitude}&latitude={latitude}")]
@@ -24,7 +24,7 @@ namespace VacationSiteAPI.Controllers
         
         }
         [HttpGet("RoomGetAvailabilityByDateRange/StartDate={StartDate}&EndDate={EndDate}")]
-        public async Task<List<RoomAvail>> RoomGetAvailabilityByDateRange(DateOnly StartDate, DateOnly EndDate)
+        public async Task<List<RoomAvail>> RoomGetAvailabilityByDateRange(DateTime StartDate, DateTime EndDate)
         {
             var RoomAvail = await hotelservice.RoomGetAvailabilityByDateRange(StartDate, EndDate);
             if (RoomAvail == null)

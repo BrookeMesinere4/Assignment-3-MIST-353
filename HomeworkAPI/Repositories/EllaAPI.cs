@@ -22,11 +22,11 @@ namespace VacationSiteAPI.Repositories
             return hotelDetails;
         }
 
-        public async Task<List<RoomAvail>> RoomGetAvailabilityByDateRange(DateOnly StartDate, DateOnly EndDate)
+        public async Task<List<RoomAvail>> RoomGetAvailabilityByDateRange(DateTime StartDate, DateTime EndDate)
         {
             var Startdateparam = new SqlParameter("@StartDate", StartDate);
             var Enddateparam = new SqlParameter("@EndDate", EndDate);
-            var roomDetails = await Task.Run(() => _dbContextClass.RoomAvail.FromSqlRaw("exec RoomGetAvailabilityByDateRange @Startdate,@EndDate", Startdate, EndDate).ToListAsync());
+            var roomDetails = await Task.Run(() => _dbContextClass.RoomAvail.FromSqlRaw("exec RoomGetAvailabilityByDateRange @Startdate,@EndDate", StartDate, EndDate).ToListAsync());
             return roomDetails;
         }
     }
